@@ -1131,12 +1131,13 @@ public class DoublePointer2 {
 //    110 的区间范围为 [62.0, 110]
 //    120 的区间范围为 [67.0, 120]
 
+
     /**
      * 逻辑正确，但时间复杂度高
      * 问题在于：
      * ####虽然是双指针，但是每次都要从两头向中间寻找目标区间，循环次数较多
      */
-    int numFriendRequests01(int[] ages) {
+    public int numFriendRequests00(int[] ages) {
         int sumRequests = 0;
         Arrays.sort(ages);
         for (int age : ages) {
@@ -1158,12 +1159,9 @@ public class DoublePointer2 {
 
 
     /**
-     * 由于left和right具有延续性，相邻两轮的迭代，left和right均递增
-     *
-     * @param ages
-     * @return
+     * 由于left和right具有延续性，相邻两轮的迭代，left和right均递增，所以left和right在各轮循环中持续增长，不重新归零
      */
-    public int numFriendRequests00(int[] ages) {
+    public int numFriendRequests01(int[] ages) {
         Arrays.sort(ages);
         int left = 0;
         int right = 0;
@@ -1173,36 +1171,79 @@ public class DoublePointer2 {
                 continue;
             }
             //针对当前的agePos的用户，其能发送请求的年龄区间的左侧边界如下
-            while (ages[left] <= 0.5 * age + 7)          //不满足条件，能移动left以寻找满足条件的左边界
+            while (ages[left] <= 0.5 * age + 7)         //不满足条件，能移动left以寻找满足条件的左边界
                 left++;
-            while (ages[right] <= age) {    //不满足条件，能移动right以寻找满足条件的右边界，右侧可等于
-                if (++right==ages.length)
-                    break;
+            while (right + 1 < ages.length && ages[right + 1] <= age) {
+                //必须是<=age，必须有等号，特别是遇到多个age相同的情况
+                right++;
+                //1.在即将越界时，会压在边界上，而不会越界，即此时 right==ages.length
+                //2.在age存在多个相同的情况下，right压在右侧age上
+                //这种写法，无论何种情况，其自身一定是在区间内（多个age相同时）或位于区间右边界，都应将自身剔除
             }
-            if (left <= right)
-                sumRequests += right - left;
+            sumRequests += right - left + 1 - 1;  //-1剔除自身
+        }
+        return sumRequests;
+    }
+
+    //相对上面的方法，区别在于：第二个while种的right+1改为right的
+    public int numFriendRequests02(int[] ages) {
+        Arrays.sort(ages);
+        int left = 0;
+        int right = 0;
+        int sumRequests = 0;
+        for (int age : ages) {
+            if (age <= 14) {
+                continue;
+            }
+            //针对当前的agePos的用户，其能发送请求的年龄区间的左侧边界如下
+            while (ages[left] <= 0.5 * age + 7)         //不满足条件，能移动left以寻找满足条件的左边界
+                left++;
+            while (right < ages.length && ages[right] <= age) {
+                //必须是<=age，必须有等号，特别是遇到多个age相同的情况
+                right++;
+                //1.right会越界，即此时 right==ages.length
+                //2.在age存在多个相同的情况下，right压在age右侧"外一位"上，即ages[right] > age
+                //####1.多个age相同的情况下（重点考虑，容易忽略的点）
+                //#########right最终状态为ages[right] > age，right位于age右侧外一位
+                //####2.单个age的情况下
+                //#########right最终状态为ages[right] > age，right位于age右侧外一位
+                //无论何种情况，right使得枚举的元素（自身）一定在区间内，其次right也在使得ages[right] = age的右侧一位
+            }
+            sumRequests += right - 1 - left + 1 - 1;  //第一个"-1"是收缩区间，第二个"-1"是剔除枚举元素自身
         }
         return sumRequests;
     }
 
 
-    public int numFriendRequests02(int[] ages) {
-        int n = ages.length;
-        Arrays.sort(ages);
-        int left = 0, right = 0, ans = 0;
-        for (int age : ages) {
-            if (age < 15) {
-                continue;
-            }
-            while (ages[left] <= 0.5 * age + 7) {
-                ++left;
-            }
-            while (right + 1 < n && ages[right + 1] <= age) {
-                ++right;
-            }
-            ans += right - left;
-        }
+    public int numFriendRequests10(int[] ages) {
+        int[] cnts = new int[120], presum = new int[121];
+        for (int age : ages)
+            cnts[age - 1]++;
+        for (int i = 1; i < 121; i++)
+            presum[i] = presum[i - 1] + cnts[i - 1];
+        int ans = 0;
+        for (int age : ages)
+            ans += Math.max(0, presum[age] - presum[age / 2 + 7] - 1);
         return ans;
+    }
+
+
+    public int numFriendRequests11(int[] ages) {
+        int numFriendRequests = 0;
+        int[] ageNum = new int[120];
+        int[] preSum = new int[121];
+        //因为年龄区间为0-120，故计算ages数组中，各个年龄的人数
+        for (int age : ages) {
+            ageNum[age - 1]++;
+        }
+        //计算各个年龄的前缀和（含自身年龄）
+        for (int i = 1; i < 121; i++) {  //本位，记录ageNum上一位（含）之前的累计和
+            preSum[i] = preSum[i - 1] + ageNum[i - 1];
+        }
+        for (int age : ages) {
+            numFriendRequests += Math.max(0, preSum[age] - preSum[age / 2 + 7] - 1);//此处取最大值，是为了剔除年龄小于15岁的请求
+        }
+        return numFriendRequests;
     }
 
 

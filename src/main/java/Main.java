@@ -327,11 +327,13 @@ public class Main {
 
         System.out.println("\n\n");
 //        int[] ages = {16, 16};
-        int[] ages = {16, 17, 18};
-//        int[] ages = {20, 30, 100, 110, 120};
+//        int[] ages = {16, 17, 18};
+        int[] ages = {20, 30, 100, 110, 120};
+        System.out.println(doublePointer2.numFriendRequests(ages));
         System.out.println(doublePointer2.numFriendRequests00(ages));
-        System.out.println(doublePointer2.numFriendRequests02(ages));
         System.out.println(doublePointer2.numFriendRequests01(ages));
+        System.out.println(doublePointer2.numFriendRequests02(ages));
+        System.out.println(doublePointer2.numFriendRequests10(ages));
 
 
 
