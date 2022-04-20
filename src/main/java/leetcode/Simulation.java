@@ -1,10 +1,7 @@
 package leetcode;
 
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 //-----------------
@@ -150,6 +147,15 @@ public class Simulation {
                 return i;
         }
         return 0;
+    }
+
+    public int missingNumber00(int[] nums) {
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length; i++) {
+            if (i != nums[i])
+                return i;
+        }
+        return nums.length;
     }
 
 
@@ -341,6 +347,122 @@ public class Simulation {
                 return v1 > v2 ? 1 : -1;
         }
         return 0;
+    }
+
+
+    /**
+     * 434. 字符串中的单词数
+     */
+    public int countSegments(String s) {
+        long count = Arrays.stream(s.split(" "))
+                .filter(t -> !t.equals(""))
+                .count();
+        return (int) count;
+    }
+
+    /**
+     * 495. 提莫攻击
+     * 暴力解法：超时
+     */
+    public int findPoisonedDuration(int[] timeSeries, int duration) {
+        int len = timeSeries.length;
+        int last = timeSeries[len - 1];
+        int[] timeAndPoisoned = new int[last + duration];
+        for (int time : timeSeries) {
+            int right = time;
+            while (right <= time + duration - 1) {
+                if (timeAndPoisoned[right] == 0)
+                    timeAndPoisoned[right]++;
+                right++;
+            }
+        }
+        int sum = Arrays.stream(timeAndPoisoned)
+                .filter(t -> t != 0)
+                .sum();
+        return sum;
+    }
+
+    //基于watermark水位线来判断，是否有交叉
+    public int findPoisonedDuration01(int[] timeSeries, int duration) {
+        int waterMark = -1;   //一定要是 -1
+        int sum = 0;
+        for (int time : timeSeries) {
+            int nextWaterMark = time + duration - 1;
+            if (time <= waterMark)
+                sum += nextWaterMark - waterMark + 1 - 1;   //取差集
+            else
+                sum += duration;  //取间距
+//                sum += nextWaterMark - time + 1 - 1;  //取间距
+            waterMark = nextWaterMark;
+        }
+        return sum;
+    }
+
+    /**
+     * 299. 猜数字游戏
+     */
+    public String getHint(String secret, String guess) {
+        int[] secretArray = new int[10];
+        int[] guessArray = new int[10];
+        int x = 0;
+        int y = 0;
+        for (int i = 0; i < secret.length(); i++) {
+            if (secret.charAt(i) == guess.charAt(i))
+                x++;
+            else {
+                secretArray[secret.charAt(i) - '0']++;
+                guessArray[guess.charAt(i) - '0']++;
+            }
+        }
+        for (int i = 0; i < 10; i++) {
+            y += Math.min(secretArray[i], guessArray[i]);
+        }
+        return x + "A" + y + "B";
+    }
+
+
+    /**
+     * 54. 螺旋矩阵
+     */
+    public List<Integer> spiralOrder(int[][] matrix) {
+        ArrayList<Integer> target = new ArrayList<>();
+        //纵坐标的范围
+        int top = 0;
+        int bottom = matrix.length - 1;
+        //横坐标的范围
+        int left = 0;
+        int right = matrix[0].length - 1;
+        //元素个数
+        int times = 0;
+        //
+        int sums = matrix.length * matrix[0].length;
+        while (times < sums) {
+            for (int i = left; i <= right; i++) {
+                target.add(matrix[top][i]);
+                times++;
+            }
+            if (times == sums) break;
+            top++;
+            for (int i = top; i <= bottom; i++) {
+                target.add(matrix[i][right]);
+                times++;
+            }
+            if (times == sums) break;
+            right--;
+            for (int i = right; i >= left; i--) {
+                target.add(matrix[bottom][i]);
+                times++;
+            }
+            if (times == sums) break;
+            bottom--;
+            for (int i = bottom; i >= top; i--) {
+                target.add(matrix[i][left]);
+                times++;
+            }
+            if (times == sums) break;
+            left++;
+        }
+        return target;
     }
 
 

@@ -429,9 +429,6 @@ public class SlidingWindow {
     /**
      * 594. 最长和谐子序列
      * 子序列问题可考虑排序
-     *
-     * @param nums
-     * @return
      */
     public int findLHS(int[] nums) {
         Arrays.sort(nums);

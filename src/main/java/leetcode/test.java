@@ -474,6 +474,38 @@ public class test {
         return false;
     }
 
+
+    /**
+     * 594. 最长和谐子序列
+     */
+    public int findLHS00(int[] nums) {
+        Arrays.sort(nums);
+        int left = 0;
+        int right = 0;
+        int maxLength = 0;
+        while (right < nums.length) {
+            while (left < right && nums[right] - nums[left] > 1)
+                left++;
+            if (nums[right] - nums[left] == 1)
+                maxLength = Math.max(maxLength, right - left + 1);
+            right++;
+        }
+        return maxLength;
+    }
+
+    public int findLHS03(int[] nums) {
+        int maxLength = 0;
+        HashMap<Integer, Integer> hTable = new HashMap<>();
+        for (int num : nums)
+            hTable.put(num, hTable.getOrDefault(num, 0) + 1);
+        for (int num : nums) {
+            if (hTable.containsKey(num + 1))
+                maxLength = Math.max(maxLength, hTable.get(num) + hTable.get(num + 1));
+        }
+        return maxLength;
+    }
+
+
 }
 
 
