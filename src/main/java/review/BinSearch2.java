@@ -13,8 +13,6 @@ public class BinSearch2 {
     /**
      * 278. 第一个错误的版本
      *
-     * @param n
-     * @return
      */
     //类型二中的单侧逼近的一种
     public int firstBadVersion(int n) {
@@ -67,9 +65,6 @@ public class BinSearch2 {
     /**
      * 33. 搜索旋转排序数组
      *
-     * @param nums
-     * @param target
-     * @return
      */
     public int search(int[] nums, int target) {
         HashMap<Integer, Integer> hTable = new HashMap<>();
@@ -113,9 +108,6 @@ public class BinSearch2 {
     /**
      * 74. 搜索二维矩阵
      *
-     * @param matrix
-     * @param target
-     * @return
      */
     public boolean searchMatrix(int[][] matrix, int target) {
         int rows = matrix.length - 1;

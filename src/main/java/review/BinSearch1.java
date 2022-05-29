@@ -1,4 +1,4 @@
-package leetcode;
+package review;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -26,15 +26,11 @@ import java.util.List;
  * <p>
  * mid的正确计算方法：mid=left + (right - left) / 2; 或者 mid=left + ((right - left) >>1) 通过位运算符 >>1等效于/2
  */
-public class Dichotomy {
+public class BinSearch1 {
 
 
     /**
      * 704. 二分查找
-     *
-     * @param nums
-     * @param target
-     * @return
      */
     //左闭右闭的写法
     public int search_simple_01(int[] nums, int target) {
@@ -139,9 +135,6 @@ public class Dichotomy {
      * 35. 搜索插入位置
      * 记录可插入的位置
      *
-     * @param nums
-     * @param target
-     * @return
      */
     public int searchInsert(int[] nums, int target) {
         int left = 0;
@@ -403,10 +396,6 @@ public class Dichotomy {
      * 例如 \textit{nums}=[3,1,2,3,3,3,3]nums=[3,1,2,3,3,3,3]，\textit{target}=2target=2，首次二分时无法判断区间 [0,3][0,3] 和区间 [4,6][4,6] 哪个是有序的。
      * <p>
      * 对于这种情况，我们只能将当前二分区间的左边界加一，右边界减一，然后在新区间上继续二分查找
-     *
-     * @param nums
-     * @param target
-     * @return
      */
     public boolean searchII(int[] nums, int target) {
         int left = 0;
@@ -451,9 +440,6 @@ public class Dichotomy {
      * 对于每个house找到距离其**最近**的供暖器
      * 由于供暖器的使用范围一致，故其应该满足所有的**最近**距离，即为最大的**最近***距离
      *
-     * @param houses
-     * @param heaters
-     * @return
      */
     public int findRadius(int[] houses, int[] heaters) {
         int radius = -1;

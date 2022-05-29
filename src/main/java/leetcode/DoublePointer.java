@@ -14,9 +14,6 @@ public class DoublePointer {
      * res = height[i] < height[j] ?
      * Math.max(res, (j - i) * height[i++]):
      * Math.max(res, (j - i) * height[j--]);
-     *
-     * @param height
-     * @return
      */
     public int maxArea(int[] height) {
         int maxArea = 0;
@@ -38,9 +35,6 @@ public class DoublePointer {
      * 26. 删除有序数组中的重复项
      * 核心：两个指针均从左侧开始移动，left满足指定条件才可移动，right作为遍历索引一直移动;
      * 因此只需要为left赋初值就好
-     *
-     * @param nums
-     * @return
      */
     public int removeDuplicates(int[] nums) {
         if (nums.length == 1) {
@@ -79,9 +73,6 @@ public class DoublePointer {
     /**
      * 3. 无重复字符的最长子串
      * 滑动窗口/双指针很多时候，通用
-     *
-     * @param s
-     * @return
      */
     public int lengthOfLongestSubstring(String s) {
         int left = 0;
@@ -105,9 +96,6 @@ public class DoublePointer {
      * 2.循环时，左右两侧都动：
      * <p>########1.滑动/平移
      * <p>########2.动态收缩滑动窗口两个边界
-     *
-     * @param s
-     * @return
      */
     public int lengthOfLongestSubstring00(String s) {
         int maxLength = 0;
@@ -128,9 +116,6 @@ public class DoublePointer {
 
     /**
      * 15. 三数之和
-     *
-     * @param nums
-     * @return
      */
     public List<List<Integer>> threeSum(int[] nums) {
         //定义一个结果集
@@ -179,9 +164,6 @@ public class DoublePointer {
 
     /**
      * 15. 三数之和
-     *
-     * @param nums
-     * @return
      */
     public List<List<Integer>> threeSum09(int[] nums) {
         //定义一个结果集
@@ -219,10 +201,6 @@ public class DoublePointer {
 
     /**
      * 18. 四数之和
-     *
-     * @param nums
-     * @param target
-     * @return
      */
     public List<List<Integer>> fourSum(int[] nums, int target) {
         int length = nums.length;
@@ -268,11 +246,7 @@ public class DoublePointer {
     }
 
     /**
-     * @param nums1
-     * @param m
-     * @param nums2
-     * @param n
-     * @return
+     *
      */
     public int[] merge(int[] nums1, int m, int[] nums2, int n) {
         for (int i = m, j = 0; i < m + n; i++, j++) {
@@ -285,12 +259,6 @@ public class DoublePointer {
     /**
      * 倒序
      * 88. 合并两个有序数组
-     *
-     * @param nums1
-     * @param m
-     * @param nums2
-     * @param n
-     * @return
      */
     public int[] merge01(int[] nums1, int m, int[] nums2, int n) {
         int p1 = m - 1;
@@ -317,12 +285,6 @@ public class DoublePointer {
 
     /**
      * 正序
-     *
-     * @param nums1
-     * @param m
-     * @param nums2
-     * @param n
-     * @return
      */
 
     public int[] merge02(int[] nums1, int m, int[] nums2, int n) {
@@ -354,9 +316,6 @@ public class DoublePointer {
 
     /**
      * [1,1,0,1,1,1]
-     *
-     * @param nums
-     * @return
      */
     public int findMaxConsecutiveOnes(int[] nums) {
         int left = 0;
@@ -374,9 +333,6 @@ public class DoublePointer {
 
     /**
      * 345. 反转字符串中的元音字母
-     *
-     * @param s
-     * @return
      */
     public String reverseVowels(String s) {
         char[] chars = s.toCharArray();
@@ -441,10 +397,6 @@ public class DoublePointer {
 
     /**
      * 16. 最接近的三数之和
-     *
-     * @param nums
-     * @param target
-     * @return
      */
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
@@ -478,9 +430,6 @@ public class DoublePointer {
 
     /**
      * 55. 跳跃游戏
-     *
-     * @param nums
-     * @return
      */
     public boolean canJump(int[] nums) {
         int minStep = 1;  //从倒数第二位能跳动1步到最后一位即可
@@ -499,9 +448,6 @@ public class DoublePointer {
 
     /**
      * 45. 跳跃游戏 II
-     *
-     * @param nums
-     * @return
      */
     public int jump(int[] nums) {
         int steps = 0;
@@ -524,9 +470,6 @@ public class DoublePointer {
 
     /**
      * 413. 等差数列划分
-     *
-     * @param nums
-     * @return
      */
     public int numberOfArithmeticSlices(int[] nums) {
         int sum = 0;
@@ -558,9 +501,6 @@ public class DoublePointer {
 
     /**
      * 443. 压缩字符串
-     *
-     * @param chars
-     * @return
      */
     public int compress(char[] chars) {
         int write = 0;  //记录写入的次数
@@ -587,7 +527,7 @@ public class DoublePointer {
         return write;
     }
 
-    public void reverse(char[] chars, int writeBegin, int writeEnd) {
+    private void reverse(char[] chars, int writeBegin, int writeEnd) {
         while (writeBegin < writeEnd) {
             char temp = chars[writeBegin];
             chars[writeBegin] = chars[writeEnd];
@@ -595,6 +535,24 @@ public class DoublePointer {
             writeBegin++;
             writeEnd--;
         }
+    }
+
+
+    /**
+     * 1446. 连续字符
+     */
+    public int maxPower(String s) {
+        int len = s.length();
+        int window = 0;
+        int left = 0;
+        int right = 0;
+        while (right < len) {
+            while (s.charAt(left) != s.charAt(right))
+                left++;
+            window = Math.max(window, right - left + 1);
+            right++;
+        }
+        return window;
     }
 
 

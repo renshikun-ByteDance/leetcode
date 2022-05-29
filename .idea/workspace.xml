@@ -2,16 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="308f182a-4ee4-4b34-9fd6-242eea49eaff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/BackTrack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/heep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/important/Thinking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/important/Working.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/other/KthLargest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/Binsearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/BinSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/BitOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/BitOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/Dichotomy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/review/BinSearch1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/DoublePointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/DoublePointer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/HashTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/SlidingWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/SlidingWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/greedy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/greedy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/leetcodeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcodeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/review/BinSearch2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/review/BinSearch2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Binsearch$TopVotedCandidate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/Binsearch$TopVotedCandidate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Binsearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/Binsearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/BitOperation$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/BitOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/BitOperation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Dichotomy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/DoublePointer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/DoublePointer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/HashTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/HashTable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/Simulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/SlidingWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/SlidingWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcodeMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcodeMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/review/SlidingWindow2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/review/SlidingWindow2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/greedy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/greedy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcodeMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/review/BinSearch2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/review/BinSearch2.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +39,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="220" />
+    <option name="myElementSize" value="224" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -57,13 +76,14 @@
   <component name="ProjectId" id="20u5LoSb7PIL3Uqz69Gelr0hR26" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Kafka-zk-restapi" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3053961" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -209,7 +229,43 @@
       <workItem from="1650163937075" duration="25627000" />
       <workItem from="1650292393692" duration="3345000" />
       <workItem from="1650376810563" duration="3216000" />
-      <workItem from="1650463427591" duration="3601000" />
+      <workItem from="1650463427591" duration="3798000" />
+      <workItem from="1650683831883" duration="16191000" />
+      <workItem from="1650766716879" duration="76000" />
+      <workItem from="1650808833250" duration="4441000" />
+      <workItem from="1650852540177" duration="10000" />
+      <workItem from="1650873616116" duration="6000" />
+      <workItem from="1650873706565" duration="608000" />
+      <workItem from="1650881296975" duration="14656000" />
+      <workItem from="1651041352092" duration="13000" />
+      <workItem from="1651066661756" duration="25013000" />
+      <workItem from="1651327687245" duration="178000" />
+      <workItem from="1651371563092" duration="19824000" />
+      <workItem from="1651461297133" duration="45927000" />
+      <workItem from="1651631048552" duration="18419000" />
+      <workItem from="1651714364020" duration="1954000" />
+      <workItem from="1651716734343" duration="18899000" />
+      <workItem from="1651806380411" duration="10929000" />
+      <workItem from="1651887111154" duration="49417000" />
+      <workItem from="1652059206697" duration="887000" />
+      <workItem from="1652101511100" duration="35078000" />
+      <workItem from="1652275162377" duration="5008000" />
+      <workItem from="1652325769377" duration="2659000" />
+      <workItem from="1652409931523" duration="59000" />
+      <workItem from="1652522047256" duration="1623000" />
+      <workItem from="1652537138485" duration="2614000" />
+      <workItem from="1652623975916" duration="2995000" />
+      <workItem from="1652710938992" duration="780000" />
+      <workItem from="1652712604514" duration="2932000" />
+      <workItem from="1652751412690" duration="605000" />
+      <workItem from="1652793819623" duration="4788000" />
+      <workItem from="1652869727637" duration="4457000" />
+      <workItem from="1653189231868" duration="23243000" />
+      <workItem from="1653310900943" duration="11889000" />
+      <workItem from="1653460502153" duration="16000" />
+      <workItem from="1653573470622" duration="4078000" />
+      <workItem from="1653614646051" duration="24000" />
+      <workItem from="1653705453334" duration="39120000" />
     </task>
     <servers />
   </component>
@@ -282,25 +338,11 @@
           <line>121</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/leetcode/test.java</url>
-          <line>329</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/leetcode/test.java</url>
-          <line>386</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/leetcode/Simulation.java</url>
-          <line>462</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/leetcode$Main.ic" NAME="Main Coverage Results" MODIFIED="1643264048250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/leetcode$leetcodeMain.ic" NAME="leetcodeMain Coverage Results" MODIFIED="1652794885937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

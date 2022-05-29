@@ -2,7 +2,11 @@ package leetcode;
 
 import java.util.*;
 
-public class Binsearch {
+
+/**
+ * 二分搜索
+ */
+public class BinSearch {
 
     /**
      * 33. 搜索旋转排序数组
@@ -62,8 +66,6 @@ public class Binsearch {
         }
         return -1;
     }
-
-    //多个if条件的，只要if中会更改其余if的判断项的值，就应该写为if/else的形式
 
 
     /**
@@ -477,6 +479,35 @@ public class Binsearch {
     }
 
 
+    public int findPeakElement03(int[] nums) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            int mid = left + ((right - left) >> 1);
+            if (nums[mid] < nums[mid + 1]) {           //left左侧上山
+                left = mid + 1;
+            } else if (nums[mid] >= nums[mid + 1]) {   //right右侧上山
+                right = mid;
+            }
+        }
+        return left;
+    }
+
+    public int findPeakElement04(int[] nums) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            int mid = left + ((right - left) >> 1);
+            if (nums[mid] <= nums[mid + 1]) {           //left左侧上山
+                left = mid + 1;
+            } else if (nums[mid] > nums[mid + 1]) {   //right右侧上山
+                right = mid;
+            }
+        }
+        return left;
+    }
+
+
 //    /**
 //     * 278. 第一个错误的版本
 //     */
@@ -625,7 +656,7 @@ public class Binsearch {
      * 1818. 绝对差值和
      * 二分查找，作为算法的一部分来使用
      */
-    int mod = (int) 1e9 + 7;
+    private int mod = (int) 1e9 + 7;
 
     public int minAbsoluteSumDiff(int[] nums1, int[] nums2) {
         long sum = 0;
@@ -647,7 +678,7 @@ public class Binsearch {
         return (int) ((sum - max) % mod);
     }
 
-    int binSearch(int[] sorted, int target) {
+    private int binSearch(int[] sorted, int target) {
         int left = 0;
         int right = sorted.length - 1;
         while (left <= right) {
@@ -688,7 +719,7 @@ public class Binsearch {
 
 
     //二分搜索的写法不同
-    public int binSearchClose(int[] sorted, int target) {
+    private int binSearchClose(int[] sorted, int target) {
         int left = 0;
         int right = sorted.length - 1;
         while (left < right) {
@@ -760,7 +791,7 @@ public class Binsearch {
     }
 
     //区间内寻找目标值两侧的值
-    public int binSearchLeftValue(int[] nums, int target) {
+    private int binSearchLeftValue(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
         int K = right;
@@ -776,7 +807,7 @@ public class Binsearch {
         return nums[K];
     }
 
-    public int binSearchRightValue(int[] nums, int target) {
+    private int binSearchRightValue(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
         int K = right;
@@ -793,20 +824,8 @@ public class Binsearch {
     }
 
 
-//    int binSearch(int[] sorted, int target) {
-//        int left = 0;
-//        int right = sorted.length - 1;
-//        while (left <= right) {
-//            int mid = left + ((right - left) >> 1);
-//            if (sorted[mid] == target)
-//                return mid;
-//            else if (sorted[mid] < target)
-//                left = mid + 1;
-//            else if (target < sorted[mid])
-//                right = mid - 1;
-//        }
-//        return 0;
-//    }
+
+
 
 
     /**
@@ -876,7 +895,7 @@ public class Binsearch {
         return radius;
     }
 
-    int binSearchRadius(int[] heaters, int house) {
+    private int binSearchRadius(int[] heaters, int house) {
         int left = 0;
         int right = heaters.length - 1;
         while (left <= right) {
@@ -968,8 +987,8 @@ public class Binsearch {
     //解答：由于水流是顺序的，所以second和first是否顺序更新的
 
 
-    int[] nums1, nums2;
-    int n, m;
+    private int[] nums1, nums2;
+    private int n, m;
 
     /**
      * 373. 查找和最小的 K 对数字
@@ -1042,15 +1061,15 @@ public class Binsearch {
     }
 
 
-
-
     public List<List<Integer>> kSmallestPairs11(int[] n1, int[] n2, int k) {
-        nums1 = n1; nums2 = n2;
-        n = nums1.length; m = nums2.length;
+        nums1 = n1;
+        nums2 = n2;
+        n = nums1.length;
+        m = nums2.length;
         List<List<Integer>> ans = new ArrayList<>();
         int l = nums1[0] + nums2[0], r = nums1[n - 1] + nums2[m - 1];
         while (l < r) {
-            int mid = (int)(0L + l + r >> 1);
+            int mid = (int) (0L + l + r >> 1);
             if (check00(mid, k)) r = mid;
             else l = mid + 1;
         }
@@ -1059,7 +1078,8 @@ public class Binsearch {
             for (int j = 0; j < m; j++) {
                 if (nums1[i] + nums2[j] < x) {
                     List<Integer> temp = new ArrayList<>();
-                    temp.add(nums1[i]); temp.add(nums2[j]);
+                    temp.add(nums1[i]);
+                    temp.add(nums2[j]);
                     ans.add(temp);
                 } else break;
             }
@@ -1067,29 +1087,33 @@ public class Binsearch {
         for (int i = 0; i < n && ans.size() < k; i++) {
             int a = nums1[i], b = x - a;
             int c = -1, d = -1;
-            l = 0; r = m - 1;
+            l = 0;
+            r = m - 1;
             while (l < r) {
-                int mid = (int)(0L + l + r >> 1);
+                int mid = (int) (0L + l + r >> 1);
                 if (nums2[mid] >= b) r = mid;
                 else l = mid + 1;
             }
             if (nums2[r] != b) continue;
             c = r;
-            l = 0; r = m - 1;
+            l = 0;
+            r = m - 1;
             while (l < r) {
-                int mid = (int)(0L + l + r + 1) >> 1;
+                int mid = (int) (0L + l + r + 1) >> 1;
                 if (nums2[mid] <= b) l = mid;
                 else r = mid - 1;
             }
             d = r;
             for (int p = c; p <= d && ans.size() < k; p++) {
                 List<Integer> temp = new ArrayList<>();
-                temp.add(a); temp.add(b);
+                temp.add(a);
+                temp.add(b);
                 ans.add(temp);
             }
         }
         return ans;
     }
+
     boolean check00(int x, int k) {
         int ans = 0;
         for (int i = 0; i < n && ans < k; i++) {
@@ -1100,25 +1124,6 @@ public class Binsearch {
         }
         return ans >= k;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     public List<List<Integer>> kSmallestPairs00(int[] nums1, int[] nums2, int k) {
@@ -1497,9 +1502,6 @@ public class Binsearch {
      * 官方题解
      * 思路：通过两层循环固定两个最短边，在第二条边至nums.length -1元素间，寻找满足条件的第三条边（最长边）
      * 同时，二分的时候，通过记录的方式来获取最终解，而不用二分的left和right来作为最终解（要进行复杂的判断，详见下下代码）
-     *
-     * @param nums
-     * @return
      */
     public int triangleNumber10(int[] nums) {
         Arrays.sort(nums);
@@ -1936,6 +1938,20 @@ public class Binsearch {
         System.out.println("left:" + left);
         System.out.println("right:" + right);
         return k;
+    }
+
+
+    public int minimumDifference(int[] nums, int k) {
+        Arrays.sort(nums);
+        int left = 0;
+        int right = k - 1;
+        int ans = Integer.MAX_VALUE;
+        while (right < nums.length) {
+            ans = Math.min(ans, nums[right] - nums[left]);
+            right++;
+            left++;
+        }
+        return ans;
     }
 
 
