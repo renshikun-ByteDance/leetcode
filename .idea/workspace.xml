@@ -2,35 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="308f182a-4ee4-4b34-9fd6-242eea49eaff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/BackTrack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/heep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/important/Thinking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/important/Working.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/other/KthLargest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/Bucket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/HashTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/important/EveryDay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/other/NumArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/other/NumMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/other/ParkingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/other/Scheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/other/Scheduler2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/other/Scheduler2Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/other/TimeTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/structure/list.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/structure/queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/review/TimeAndDays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/TimeAndDate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/Binsearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/BinSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/BitOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/BitOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/Dichotomy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/review/BinSearch1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/DoublePointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/DoublePointer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/HashTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/greedy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/greedy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/BackTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/BackTrack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/BinSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/BinSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/BitOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/Byte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/DoublePointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/DoublePointer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/HashTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/SlidingWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/SlidingWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/TopVotedCandidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/other/TopVotedCandidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/Tree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/greedy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/greedy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/heep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/important/Thinking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/important/Thinking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/important/Working.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/important/Working.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/leetcode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/review/leetcode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/prefixSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/prefixSum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/leetcodeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcodeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/review/BinSearch2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/review/BinSearch2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Binsearch$TopVotedCandidate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/Binsearch$TopVotedCandidate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Binsearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/Binsearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/BitOperation$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/BitOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/BitOperation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Dichotomy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/DoublePointer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/DoublePointer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/HashTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/HashTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/Simulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/greedy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/greedy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leetcodeMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/review/BinSearch2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/review/BinSearch2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/review/reviewCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/review/reviewCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/BackTrack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Binsearch$TopVotedCandidate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Binsearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/BitOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/DoublePointer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/HashTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Simulation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/SlidingWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/TopVotedCandidate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Tree$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/Tree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/greedy$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/greedy$charAndNums.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/greedy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/heep.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/important/Thinking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/important/Thinking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/important/Working$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/important/Working$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/important/Working$charAndNums.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/important/Working$charAndNums.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/important/Working.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/important/Working.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/leetcode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/prefixSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/review/reviewCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/review/reviewCode.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +110,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3053961" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -103,8 +130,21 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.leetcodeMain">
-    <configuration name="CommonUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="utils.CommonUtils" />
+    <configuration name="Scheduler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.other.Scheduler" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.other.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeAndDate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.TimeAndDate" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -116,9 +156,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="TimeAndDays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="review.TimeAndDays" />
       <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="review.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,11 +176,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="queue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.structure.queue" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.structure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.leetcodeMain" />
+      <item itemvalue="Application.Scheduler" />
+      <item itemvalue="Application.TimeAndDays" />
+      <item itemvalue="Application.queue" />
+      <item itemvalue="Application.TimeAndDate" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.leetcodeMain" />
-        <item itemvalue="Application.CommonUtils" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.TimeAndDate" />
+        <item itemvalue="Application.queue" />
+        <item itemvalue="Application.TimeAndDays" />
+        <item itemvalue="Application.Scheduler" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +333,30 @@
       <workItem from="1653460502153" duration="16000" />
       <workItem from="1653573470622" duration="4078000" />
       <workItem from="1653614646051" duration="24000" />
-      <workItem from="1653705453334" duration="39120000" />
+      <workItem from="1653705453334" duration="39888000" />
+      <workItem from="1653877596266" duration="81000" />
+      <workItem from="1653920533041" duration="3585000" />
+      <workItem from="1653959269100" duration="6375000" />
+      <workItem from="1653992663127" duration="4616000" />
+      <workItem from="1654068673468" duration="7092000" />
+      <workItem from="1654171776508" duration="2930000" />
+      <workItem from="1654323938462" duration="913000" />
+      <workItem from="1654584035289" duration="39071000" />
+      <workItem from="1654739170960" duration="620000" />
+      <workItem from="1654782934245" duration="3794000" />
+      <workItem from="1654833259337" duration="1673000" />
+      <workItem from="1654842002445" duration="36014000" />
+      <workItem from="1655193054812" duration="51349000" />
+      <workItem from="1655445945425" duration="8567000" />
+      <workItem from="1655517724476" duration="44187000" />
+      <workItem from="1655689352741" duration="125000" />
+      <workItem from="1655734290606" duration="3967000" />
+      <workItem from="1655773784476" duration="9000" />
+      <workItem from="1655796814776" duration="38000" />
+      <workItem from="1655796993172" duration="628000" />
+      <workItem from="1655807187565" duration="3062000" />
+      <workItem from="1655817227240" duration="6464000" />
+      <workItem from="1655859290511" duration="47000" />
     </task>
     <servers />
   </component>
@@ -329,12 +420,12 @@
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/leetcode/Simulation.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/algorithm/Simulation.java</url>
           <line>91</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/leetcode/Simulation.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/algorithm/Simulation.java</url>
           <line>121</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
@@ -343,6 +434,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/leetcode$Main.ic" NAME="Main Coverage Results" MODIFIED="1643264048250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/leetcode$leetcodeMain.ic" NAME="leetcodeMain Coverage Results" MODIFIED="1652794885937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/leetcode$leetcodeMain.ic" NAME="leetcodeMain Coverage Results" MODIFIED="1654661101400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

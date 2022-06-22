@@ -162,6 +162,15 @@ public class Thinking {
         return arr[arr.length - 1];
     }
 
+    public int maximumElementAfterDecrementingAndRearranging01(int[] arr) {
+        Arrays.sort(arr);
+        arr[0] = 1;
+        for (int i = 1; i < arr.length; i++) {
+            arr[i] = Math.min(arr[i], arr[i - 1] + 1);  //巧用最值，避免复杂的判断
+        }
+        return arr[arr.length - 1];
+    }
+
 
     /**
      * 2170. 使数组变成交替数组的最少操作数
@@ -299,6 +308,31 @@ public class Thinking {
 
 
     /**
+     * 1996. 游戏中弱角色的数量
+     */
+    public int numberOfWeakCharacters02(int[][] properties) {
+        int ans = 0;
+        Arrays.sort(properties, (o1, o2) -> {
+            if (o1[0] != o2[0])
+                return o2[0] - o1[0];
+            else
+                return o1[1] - o2[1];
+        });
+        int currentMaxDefense = properties[0][1];
+        for (int i = 1; i < properties.length; i++) {
+            //-------------------------------------
+            //由于主排序基于"攻击值"，为了保证"攻击值"相等的两个角色 A[100,100]/B[100,200] 可以同时作为"弱角色"，因此，此处仅逐一比较各个角色的"防御值"
+            //   为了避免这样的逻辑导致 A成为B的弱角色，因此，在排序的时候，针对这种"攻击值"相等的情况，应该按照"防御值"升序排序，从而避免这种情况；
+            //-------------------------------------
+            if (currentMaxDefense > properties[i][1])
+                ans++;
+            currentMaxDefense = Math.max(currentMaxDefense, properties[i][1]);  //更新防御值，取最大值
+        }
+        return ans;
+    }
+
+
+    /**
      * 162. 寻找峰值
      */
     public int findPeakElement(int[] nums) {
@@ -338,9 +372,6 @@ public class Thinking {
         }
         return left;
     }
-
-
-
 
 
     /**
@@ -390,6 +421,61 @@ public class Thinking {
 
         return -6;
     }
+
+
+    /**
+     * 661. 图片平滑器
+     * 基于 矩阵 的思想
+     */
+    public int[][] imageSmoother(int[][] img) {
+        int rows = img.length;
+        int columns = img[0].length;
+        int[][] ans = new int[rows][columns];
+        int[][] prefixSum = new int[rows + 1][columns + 1];  //列仅补齐左侧，左侧第一列为 0
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= columns; j++) {
+                prefixSum[i][j] = prefixSum[i - 1][j] + prefixSum[i][j - 1] - prefixSum[i - 1][j - 1] + img[i - 1][j - 1];
+            }
+        }
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                //四个点均为 img 矩阵中的坐标
+                int left = Math.max(j - 1, 0);
+                int right = Math.min(j + 1, columns - 1);
+                int top = Math.max(i - 1, 0);
+                int bottom = Math.min(i + 1, rows - 1);
+                //矩阵的合理范围
+                int window = (right - left + 1) * (bottom - top + 1);
+                //矩阵的累加值
+                int sum = prefixSum[bottom + 1][right + 1]
+                        - prefixSum[bottom + 1][left]
+                        - prefixSum[top][right + 1]
+                        + prefixSum[top][left];
+                //矩阵的平均值
+                ans[i][j] = sum / window;
+            }
+        }
+        return ans;
+    }
+
+
+    /**
+     * 2104. 子数组范围和
+     */
+    public long subArrayRanges(int[] nums) {
+        long ans = 0;
+        for (int i = 0; i < nums.length; i++) { //枚举数组的开始元素
+            int maxValue = nums[i];
+            int minValue = nums[i];
+            for (int j = i + 1; j < nums.length; j++) {  //枚举所有连续子数组的组合
+                maxValue = Math.max(maxValue, nums[j]);
+                minValue = Math.min(minValue, nums[j]);
+                ans += maxValue - minValue;      //计算
+            }
+        }
+        return ans;
+    }
+
 
 
 }

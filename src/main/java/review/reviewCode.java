@@ -611,5 +611,37 @@ public class reviewCode {
         return ans >= k;
     }
 
+    public int pivotIndex02(int[] nums) {
+        int preSum = 0;
+        int sum = Arrays.stream(nums).sum();
+        for (int i = 0; i < nums.length; i++) {
+            if (2 * preSum + nums[i] == sum)
+                return i;
+            preSum += nums[i];
+        }
+        return -1;
+    }
+
+    public int sumOddLengthSubarrays00(int[] nums) {
+        int sum = 0;
+        int maxWindowLen = (nums.length & 1) == 1 ? nums.length : nums.length - 1;
+        for (int window = 1; window <= maxWindowLen; window += 2) {
+            int left = 0;
+            int right = 0;
+            int temp = 0;
+            while (right < nums.length) {
+                temp += nums[right];
+                if (right - left + 1 == window) {
+                    sum += temp;
+                    temp -= nums[left];
+                    left++;
+                }
+                right++;
+            }
+        }
+        return sum;
+    }
+
+
 
 }

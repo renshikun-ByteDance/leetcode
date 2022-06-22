@@ -1,6 +1,9 @@
 package leetcode.important;
 
+import java.sql.Timestamp;
 import java.util.*;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.regex.Matcher;
 
 public class Working {
 
@@ -1533,6 +1536,493 @@ public class Working {
     }
 
 
+    /**
+     * 686. 重复叠加字符串匹配
+     */
+    public int repeatedStringMatch(String a, String b) {
+//        if (b.length() < a.length()) return -1;  //  a="aa",b="a" 答案为 1，因此无需判断
+        int Times = 0;
+        StringBuilder build = new StringBuilder();
+        while (build.length() < b.length()) {
+            build.append(a);
+            Times++;
+        }
+        if (build.toString().contains(b))
+            return Times;
+        //新增一遍
+        build.append(a);
+        Times++;
+        if (build.toString().contains(b))
+            return Times;
+        return -1;
+    }
+
+
+    /**
+     * 451. 根据字符出现频率排序
+     */
+    public String frequencySort(String s) {
+        StringBuilder ans = new StringBuilder();
+        HashMap<Character, Integer> charAndTimes = new HashMap<>();
+        int maxFreq = 0;  //用于确定 bucket的个数
+        for (int i = 0; i < s.length(); i++) {  //记录各个字符出现的字数
+            Integer freq = charAndTimes.getOrDefault(s.charAt(i), 0);
+            charAndTimes.put(s.charAt(i), freq + 1);
+            maxFreq = Math.max(maxFreq, freq + 1);
+        }
+        StringBuilder[] buckets = new StringBuilder[maxFreq + 1];
+        for (int i = 0; i < buckets.length; i++) {
+            buckets[i] = new StringBuilder();
+        }
+        for (Map.Entry<Character, Integer> entries : charAndTimes.entrySet()) {
+            buckets[entries.getValue()].append(entries.getKey());
+        }
+        for (int i = maxFreq; i >= 0; i--) {
+            StringBuilder bucketElements = buckets[i];
+            for (int j = 0; j < bucketElements.length(); j++) {
+                char ca = bucketElements.charAt(j);
+                int Times = i;
+                while (Times > 0) {
+                    ans.append(ca);
+                    Times--;
+                }
+            }
+        }
+        return ans.toString();
+    }
+
+
+    public String frequencySort01(String s) {
+        StringBuilder ans = new StringBuilder();
+        int[][] sorted = new int[128][2];
+        for (int i = 0; i < sorted.length; i++) {
+            sorted[i][0] = i;  //第一列元素的值用"索引"赋值，用于标识"各个字符"
+        }
+        for (int i = 0; i < s.length(); i++) {
+            //自动将字符a b等转换为对应的 ASCII码（int）
+            sorted[s.charAt(i)][1]++;     //基于"字符的标识"，来累加各个字符出现的频次
+        }
+        Arrays.sort(sorted, (o1, o2) -> { //基于各个字符出现的频次Times对数组排序，期间字符和字符的频次的对应关系不会变化，其相当于一行
+            if (o1[1] != o2[1])    //二维数组每一行均为一个 数组
+                return o2[1] - o1[1];
+            else
+                return o1[0] - o2[0];  //直接基于 字符转换对应的 ASCII 码进行比较，A.compare(B)的本质
+
+            //--------------------------------------------------
+            // 两个字符串 compare ，本质是逐个字符进行比较
+            // 两个字符   compare ，本质是字符对应的 ASCII码进行比较
+            //--------------------------------------------------
+
+        });
+        //排序后，索引已经和 o[1] 的关系断裂
+        for (int i = 0; i < 128; i++) {  //排序后，索引小的频次大，整体呈现下降趋势（因为每一位标识一个字符，可能存在多个字符的频次相等，故趋势会有平移的情况），到某个位置归为 0
+            int times = sorted[i][1];
+            if (times != 0) {
+                while (times > 0) {
+                    ans.append((char) sorted[i][0]);  // 将此 频次对应的字符 添加至结果
+                    times--;
+                }
+            }
+        }
+        return ans.toString();
+    }
+
+
+    /**
+     * 1005. K 次取反后最大化的数组和
+     */
+    public int largestSumAfterKNegations03(int[] nums, int k) {
+        PriorityQueue<Integer> sortedQueue = new PriorityQueue<>();
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            sortedQueue.add(nums[i]);
+        }
+        for (int i = k; i > 0 && !sortedQueue.isEmpty(); i--) {
+            if (sortedQueue.peek() < 0) {
+                Integer poll = sortedQueue.poll();
+                sortedQueue.add(-poll);
+                sum -= 2 * poll;
+            } else if (sortedQueue.peek() > 0 && (i & 1) == 1) {
+                return sum - 2 * sortedQueue.poll();
+            } else {
+                return sum;
+            }
+        }
+        return sum;
+    }
+
+    public int largestSumAfterKNegations04(int[] nums, int k) {
+        int sum = 0;
+        int[] buckets = new int[202];  //桶排序：将数据散列至桶内，无需执行排序操作
+        for (int num : nums) {
+            buckets[num + 100]++;      //负数映射至索引区间（正）
+            sum += num;
+        }
+        //处理负数
+        for (int i = 0; i < 100; i++) {
+            if (buckets[i] != 0) {
+                int freq = Math.min(buckets[i], k);  //可替换的次数
+                sum -= 2 * freq * (i - 100);  //回归本源
+                buckets[100 - i + 100] += freq;      // 100 - i为对应的正数，+ 100将此正数投射至区间 [100 , 200]
+                k -= freq;                           //更新剩余可替换的次数
+                if (k == 0)
+                    return sum;
+            }
+        }
+        //处理 0
+        if (buckets[100] != 0 || (k & 1) == 0)  //存在 0 或剩余次数为 偶数，直接返回结果
+            return sum;
+        //处理正数
+        for (int i = 101; i < buckets.length; i++) {  //且 剩余 的可替换体术为 奇数，即只需找到最小值替换即可
+            if (buckets[i] != 0) {
+                sum -= 2 * (i - 100);  //剩余奇数次，等效于针对正数的最小值执行一次
+                return sum;
+            }
+        }
+        return -1;
+    }
+
+
+    public int largestSumAfterKNegations05(int[] nums, int k) {
+        int sum = 0;
+        HashMap<Integer, Integer> buckets = new HashMap<>();
+        for (int num : nums) {
+            sum += num;
+            buckets.put(num, buckets.getOrDefault(num, 0) + 1);
+        }
+        for (int i = -100; i < 0; i++) {
+            if (buckets.containsKey(i)) {
+                int freq = Math.min(k, buckets.get(i));
+                sum -= 2 * freq * i;
+                buckets.put(-i, buckets.getOrDefault(-i, 0) + freq);
+                k -= freq;
+            }
+            if (k == 0)
+                return sum;
+        }
+
+        StringBuilder[] stringBuilders = new StringBuilder[10];
+        if (buckets.containsKey(0) || (k & 1) == 0)
+            return sum;
+
+        for (int i = 1; i < 101; i++) {
+            if (buckets.containsKey(i)) {
+                sum -= 2 * i;
+                return sum;
+            }
+        }
+        return -1;
+    }
+
+
+    /**
+     * 20. 有效的括号
+     */
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+        HashMap<Character, Character> hTable = new HashMap<>();
+        hTable.put('(', ')');
+        hTable.put('[', ']');
+        hTable.put('{', '}');
+        char[] array = s.toCharArray();
+        for (Character ca : array) {
+            if (!stack.isEmpty() && hTable.containsKey(stack.peek()) && hTable.get(stack.peek()) == ca)
+                stack.pop();
+            else
+                stack.add(ca);
+        }
+        return stack.isEmpty();
+    }
+
+
+    /**
+     * 1190. 反转每对括号间的子串
+     */
+    public String reverseParentheses(String s) {
+        Stack<Character> stack = new Stack<>();
+        char[] array = s.toCharArray();
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == ')') {
+                StringBuilder builder = new StringBuilder();
+                while (stack.peek() != '(') {
+                    builder.append(stack.pop());   // LIFO -> FIFO
+                }
+                stack.pop();  //剔除 '('
+                for (Character ca : builder.toString().toCharArray())
+                    stack.push(ca);
+            } else {
+                stack.add(array[i]);
+            }
+        }
+
+        StringBuilder ans = new StringBuilder();
+        for (Character ca : stack) {
+            ans.append(ca);
+        }
+        return ans.toString();
+    }
+
+
+    public String reverseParentheses01(String s) {
+        char[] array = s.toCharArray();
+        ArrayDeque<Character> dequeQueue = new ArrayDeque<>();
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == ')') {
+                ConcurrentLinkedQueue<Character> fifoQueue = new ConcurrentLinkedQueue<>();
+                while (!dequeQueue.isEmpty() && dequeQueue.getLast() != '(') {
+                    fifoQueue.add(dequeQueue.pollLast());
+                }
+                dequeQueue.pollLast();
+                while (!fifoQueue.isEmpty()) {
+                    dequeQueue.add(fifoQueue.poll());
+                }
+            } else {
+                dequeQueue.add(array[i]);
+            }
+        }
+        StringBuilder ans = new StringBuilder();
+        while (!dequeQueue.isEmpty()) {
+            ans.append(dequeQueue.pollFirst());
+        }
+        return ans.toString();
+    }
+
+
+    /**
+     * 1047. 删除字符串中的所有相邻重复项
+     */
+    public String removeDuplicates(String s) {
+        StringBuilder ans = new StringBuilder();
+        char[] array = s.toCharArray();
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < array.length; i++) {
+            if (!stack.isEmpty() && stack.peek() == array[i])
+                stack.pop();
+            else
+                stack.add(array[i]);
+        }
+        for (Character ca : stack)
+            ans.append(ca);
+        return ans.toString();
+    }
+
+
+    /**
+     * 32. 最长有效括号
+     */
+    public int longestValidParentheses(String s) {
+        char[] array = s.toCharArray();
+        int[] flags = new int[array.length];
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == '(') {  //仅记录左括号，右括号忽略
+                stack.add(i);
+            } else {
+                if (!stack.isEmpty() && array[stack.peek()] == '(') {
+                    flags[i] = 1;   //右括号位置
+                    flags[stack.pop()] = 1;  //右括号对应左括号的位置
+                }
+            }
+        }
+        int maxLong = 0;
+        int Times = 0;
+        for (int i = 0; i < flags.length; i++) {
+            if (flags[i] == 1) {
+                Times++;
+                maxLong = Math.max(maxLong, Times);
+            } else {
+                Times = 0;
+            }
+        }
+        return maxLong;
+    }
+
+    public int longestValidParentheses01(String s) {
+        int maxLong = 0;
+        char[] array = s.toCharArray();
+        Stack<Integer> stack = new Stack<>();
+        stack.add(-1);
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == '(') {
+                stack.push(i);
+            } else {
+                Integer pop = stack.pop();
+                if (stack.isEmpty()) {  //等效于取出的是"("下标，因为堆底为"最后一个没有被匹配的右括号的下标"
+                    stack.push(i);
+                } else {
+//                    maxLong = Math.max(maxLong, i - pop + 1);      //不能计算连续区间
+                    maxLong = Math.max(maxLong, i - stack.peek());   //才能计算连续区间 ")()())"
+                }
+            }
+        }
+        return maxLong;
+    }
+
+
+    /**
+     * 524. 通过删除字母匹配到字典里最长单词
+     */
+    public String findLongestWord3(String sentence, List<String> dictionary) {
+        dictionary.sort((o1, o2) -> {   //贪心
+            if (o1.length() != o2.length())
+                return o2.length() - o1.length();
+            else
+                return o1.compareTo(o2);
+        });
+        for (String word : dictionary) {
+            int wpos = 0;
+            int spos = 0;
+            while (wpos < word.length() && spos < sentence.length()) {
+                if (word.charAt(wpos) == sentence.charAt(spos)) {
+                    wpos++;
+                }
+                spos++;
+            }
+            if (wpos == word.length())   //退出循环的条件为 word 遍历完，且第一个退出循环的即为目标值
+                return word;
+        }
+        return "";
+    }
+
+
+    /**
+     * 1705. 吃苹果的最大数目
+     */
+    public int eatenApples02(int[] apples, int[] days) {
+        int maxApples = 0;
+        PriorityQueue<int[]> sortedQueue = new PriorityQueue<>((o1, o2) -> o1[0] - o2[0]);
+        int currentDay = 0;
+        while (!sortedQueue.isEmpty() || currentDay < apples.length) {  //不能写为 currentDay == 0
+            //添加元素
+            if (currentDay < apples.length && apples[currentDay] != 0)
+                sortedQueue.add(new int[]{currentDay + days[currentDay], apples[currentDay]});
+            //剔除过期元素
+            while (!sortedQueue.isEmpty() && ((sortedQueue.peek()[0] <= currentDay) || (sortedQueue.peek()[1] == 0)))
+                sortedQueue.poll();
+            //消耗元素
+            if (!sortedQueue.isEmpty()) {
+                sortedQueue.peek()[1]--;
+                maxApples++;
+            }
+            currentDay++;
+        }
+        return maxApples;
+    }
+
+
+    /**
+     * 1833. 雪糕的最大数量
+     */
+    public int maxIceCream01(int[] costs, int coins) {
+        Arrays.sort(costs);
+        int nums = 0;
+        for (int i = 0; i < costs.length; i++) {
+            if (coins - costs[i] >= 0) {
+                coins -= costs[i];
+                nums++;
+            }
+        }
+        return nums;
+    }
+
+
+    /**
+     * 1877. 数组中最大数对和的最小值
+     */
+    public int minPairSum01(int[] nums) {
+        Arrays.sort(nums);
+        int ans = Integer.MIN_VALUE;
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            ans = Math.max(ans, nums[right] + nums[left]);
+            left++;
+            right--;
+        }
+        return ans;
+    }
+
+
+    /**
+     * 1846. 减小和重新排列数组后的最大元素
+     */
+    public int maximumElementAfterDecrementingAndRearranging02(int[] arr) {
+        Arrays.sort(arr);
+        arr[0] = 1;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] - arr[i - 1] > 1)
+                arr[i] = arr[i - 1] + 1;
+        }
+        return arr[arr.length - 1];
+    }
+
+    public int maximumElementAfterDecrementingAndRearranging03(int[] arr) {
+        Arrays.sort(arr);
+        arr[0] = 1;
+        for (int i = 1; i < arr.length; i++) {
+            arr[i] = Math.min(arr[i], arr[i - 1] + 1);
+        }
+        return arr[arr.length - 1];
+    }
+
+
+    /**
+     * 1996. 游戏中弱角色的数量
+     */
+    public int numberOfWeakCharacters02(int[][] properties) {
+        int ans = 0;
+        Arrays.sort(properties, (o1, o2) -> {
+            if (o1[0] != o2[0])
+                return o2[0] - o1[0];
+            else
+                return o1[1] - o2[1];
+        });
+        int currentMaxDefense = properties[0][1];
+        for (int i = 1; i < properties.length; i++) {
+            if (currentMaxDefense > properties[i][1])
+                ans++;
+            currentMaxDefense = Math.max(currentMaxDefense, properties[i][1]);
+        }
+        return ans;
+    }
+
+
+    /**
+     * 2170. 使数组变成交替数组的最少操作数
+     */
+    public int minimumOperations02(int[] nums) {
+        int maxTimes = 0;
+        HashMap<Integer, Integer> aTimes = new HashMap<>();
+        HashMap<Integer, Integer> bTimes = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if ((i & 1) == 1)
+                aTimes.put(nums[i], aTimes.getOrDefault(nums[i], 0) + 1);
+            else
+                bTimes.put(nums[i], bTimes.getOrDefault(nums[i], 0) + 1);
+        }
+        //均给两位默认值，防止数组为 [1]
+        aTimes.put(0, 0);
+        aTimes.put(-1, 0);
+        bTimes.put(0, 0);
+        bTimes.put(-1, 0);
+        ArrayList<Map.Entry<Integer, Integer>> sortedATimes = new ArrayList<>(aTimes.entrySet());
+        ArrayList<Map.Entry<Integer, Integer>> sortedBTimes = new ArrayList<>(bTimes.entrySet());
+        sortedATimes.sort(Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder()));
+        sortedBTimes.sort(Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder()));
+        Map.Entry<Integer, Integer> aTop1 = sortedATimes.get(0);
+        Map.Entry<Integer, Integer> aTop2 = sortedATimes.get(1);
+        Map.Entry<Integer, Integer> bTop1 = sortedBTimes.get(0);
+        Map.Entry<Integer, Integer> bTop2 = sortedBTimes.get(1);
+        if (!aTop1.getKey().equals(bTop1.getKey()))
+            maxTimes = aTop1.getValue() + bTop1.getValue();
+        else
+            maxTimes = Math.max(aTop1.getValue() + bTop2.getValue(), aTop2.getValue() + bTop1.getValue());
+        return nums.length - maxTimes;
+    }
+
+
 }
+
 
 
