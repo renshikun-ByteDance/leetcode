@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="308f182a-4ee4-4b34-9fd6-242eea49eaff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/MathMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetcode/homework/Working2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/other/AuthenticationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/other/Bank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/other/FoodRatings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/other/FrequencyTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/BFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/BackTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/BackTrack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/BinSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/BinSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/Bucket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/Bucket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/Byte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/Byte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/DAG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/DAG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/DFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/DoublePointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/DoublePointer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/SlidingWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/SlidingWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/UnionFindSets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/UnionFindSets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/greedy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/greedy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/minDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/minDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/prefixSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/prefixSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/algorithm/queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/homework/Working.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/homework/Working.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/important/DynamicProgramming.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/important/DynamicProgramming.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/important/DynamicProgrammingSpecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/important/DynamicProgrammingSpecial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcode/important/ThinkingMore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcode/important/ThinkingMore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetcodeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetcodeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/TimeAndDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/TimeAndDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/leetcode.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/BFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/BackTrack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/BackTrack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/BinSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/BinSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/Bucket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/Bucket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/Byte.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/Byte.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/DAG.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/DAG.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/DFS$containsCycleUFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/DFS$containsCycleUFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/DFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/DFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/DoublePointer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/DoublePointer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/Simulation$countServersUFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/Simulation$countServersUFS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/Simulation$wordAndIndex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/Simulation$wordAndIndex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/Simulation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/SlidingWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/SlidingWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/UnionFindSets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/UnionFindSets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/greedy$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/greedy$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/greedy$charAndNums.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/greedy$charAndNums.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/greedy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/greedy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/minDistance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/minDistance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/prefixSum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/prefixSum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/algorithm/queue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/algorithm/queue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/homework/Working.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/homework/Working.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/important/DynamicProgramming.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/important/DynamicProgramming.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/important/DynamicProgrammingSpecial.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/important/DynamicProgrammingSpecial.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcode/important/ThinkingMore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcode/important/ThinkingMore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/leetcodeMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leetcodeMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/TimeAndDate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/TimeAndDate.class" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="224" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="20u5LoSb7PIL3Uqz69Gelr0hR26" />
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/leetcode/competition/hot" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3053961" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEAproject\leetcode\src\main\java\leetcode\competition\hot" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.leetcodeMain">
+    <configuration name="ListNodeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.other.ListNodeTest" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utils.pojo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimeAndDate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="utils.TimeAndDate" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="leetcodeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcodeMain" />
+      <module name="leetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="subject3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.competition.current.subject3" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.competition.current.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="subject4 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.competition.current.subject4" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.competition.current.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.leetcodeMain" />
+      <item itemvalue="Application.subject3" />
+      <item itemvalue="Application.subject4 (1)" />
+      <item itemvalue="Application.ListNodeTest" />
+      <item itemvalue="Application.TimeAndDate" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.leetcodeMain" />
+        <item itemvalue="Application.TimeAndDate" />
+        <item itemvalue="Application.ListNodeTest" />
+        <item itemvalue="Application.subject4 (1)" />
+        <item itemvalue="Application.subject3" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\lenovo\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="308f182a-4ee4-4b34-9fd6-242eea49eaff" name="Default Changelist" comment="" />
+      <created>1636881578314</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636881578314</updated>
+      <workItem from="1636881581319" duration="20245000" />
+      <workItem from="1637198868876" duration="7835000" />
+      <workItem from="1637380386318" duration="27260000" />
+      <workItem from="1638582925699" duration="72368000" />
+      <workItem from="1639056621554" duration="4812000" />
+      <workItem from="1640098156839" duration="9665000" />
+      <workItem from="1640238892118" duration="33000" />
+      <workItem from="1640262569525" duration="7332000" />
+      <workItem from="1640408444946" duration="183391000" />
+      <workItem from="1641695233392" duration="30084000" />
+      <workItem from="1641995924954" duration="4787000" />
+      <workItem from="1642061049935" duration="2427000" />
+      <workItem from="1642232744589" duration="2413000" />
+      <workItem from="1642428801702" duration="40792000" />
+      <workItem from="1642990521746" duration="65755000" />
+      <workItem from="1644199300105" duration="29745000" />
+      <workItem from="1644282786070" duration="60304000" />
+      <workItem from="1644455573510" duration="8997000" />
+      <workItem from="1644560110496" duration="5297000" />
+      <workItem from="1644636936136" duration="600000" />
+      <workItem from="1644746887581" duration="8740000" />
+      <workItem from="1644803220579" duration="4879000" />
+      <workItem from="1644904870311" duration="3782000" />
+      <workItem from="1645108946261" duration="3028000" />
+      <workItem from="1645234412626" duration="52119000" />
+      <workItem from="1645410361614" duration="23000" />
+      <workItem from="1645440919115" duration="3607000" />
+      <workItem from="1645529145648" duration="5500000" />
+      <workItem from="1645616203310" duration="8082000" />
+      <workItem from="1645665241429" duration="33000" />
+      <workItem from="1645714953034" duration="3885000" />
+      <workItem from="1645751637651" duration="17000" />
+      <workItem from="1645771462495" duration="3560000" />
+      <workItem from="1645839663031" duration="21000" />
+      <workItem from="1645843610863" duration="1882000" />
+      <workItem from="1645874485644" duration="12000" />
+      <workItem from="1645876317944" duration="2802000" />
+      <workItem from="1645928062010" duration="21490000" />
+      <workItem from="1646011404734" duration="437000" />
+      <workItem from="1646058011007" duration="4726000" />
+      <workItem from="1646097486436" duration="17000" />
+      <workItem from="1646122482800" duration="1069000" />
+      <workItem from="1646145350408" duration="2667000" />
+      <workItem from="1646183402121" duration="113000" />
+      <workItem from="1646227131946" duration="56000" />
+      <workItem from="1646227586698" duration="32000" />
+      <workItem from="1646227637764" duration="6688000" />
+      <workItem from="1646270759339" duration="28000" />
+      <workItem from="1646920081895" duration="4333000" />
+      <workItem from="1646962158251" duration="601000" />
+      <workItem from="1646965785565" duration="107000" />
+      <workItem from="1647268069372" duration="2621000" />
+      <workItem from="1647335112681" duration="16000" />
+      <workItem from="1647340645770" duration="9135000" />
+      <workItem from="1647436401157" duration="5761000" />
+      <workItem from="1647484372142" duration="10000" />
+      <workItem from="1647518071470" duration="5757000" />
+      <workItem from="1647744575239" duration="16478000" />
+      <workItem from="1647826927485" duration="119000" />
+      <workItem from="1647868897177" duration="3930000" />
+      <workItem from="1647929085207" duration="23000" />
+      <workItem from="1648045272040" duration="2497000" />
+      <workItem from="1648085546170" duration="45000" />
+      <workItem from="1648215609580" duration="4755000" />
+      <workItem from="1649125289179" duration="18501000" />
+      <workItem from="1649169962657" duration="985000" />
+      <workItem from="1649208462846" duration="36502000" />
+      <workItem from="1649296633335" duration="165000" />
+      <workItem from="1649338235252" duration="4668000" />
+      <workItem from="1649388215902" duration="12000" />
+      <workItem from="1649417051406" duration="5480000" />
+      <workItem from="1649472544734" duration="608000" />
+      <workItem from="1649557805181" duration="15553000" />
+      <workItem from="1649683649553" duration="4857000" />
+      <workItem from="1649726607004" duration="183000" />
+      <workItem from="1649773918456" duration="1364000" />
+      <workItem from="1649827960715" duration="24000" />
+      <workItem from="1649831267691" duration="3658000" />
+      <workItem from="1650163937075" duration="25627000" />
+      <workItem from="1650292393692" duration="3345000" />
+      <workItem from="1650376810563" duration="3216000" />
+      <workItem from="1650463427591" duration="3798000" />
+      <workItem from="1650683831883" duration="16191000" />
+      <workItem from="1650766716879" duration="76000" />
+      <workItem from="1650808833250" duration="4441000" />
+      <workItem from="1650852540177" duration="10000" />
+      <workItem from="1650873616116" duration="6000" />
+      <workItem from="1650873706565" duration="608000" />
+      <workItem from="1650881296975" duration="14656000" />
+      <workItem from="1651041352092" duration="13000" />
+      <workItem from="1651066661756" duration="25013000" />
+      <workItem from="1651327687245" duration="178000" />
+      <workItem from="1651371563092" duration="19824000" />
+      <workItem from="1651461297133" duration="45927000" />
+      <workItem from="1651631048552" duration="18419000" />
+      <workItem from="1651714364020" duration="1954000" />
+      <workItem from="1651716734343" duration="18899000" />
+      <workItem from="1651806380411" duration="10929000" />
+      <workItem from="1651887111154" duration="49417000" />
+      <workItem from="1652059206697" duration="887000" />
+      <workItem from="1652101511100" duration="35078000" />
+      <workItem from="1652275162377" duration="5008000" />
+      <workItem from="1652325769377" duration="2659000" />
+      <workItem from="1652409931523" duration="59000" />
+      <workItem from="1652522047256" duration="1623000" />
+      <workItem from="1652537138485" duration="2614000" />
+      <workItem from="1652623975916" duration="2995000" />
+      <workItem from="1652710938992" duration="780000" />
+      <workItem from="1652712604514" duration="2932000" />
+      <workItem from="1652751412690" duration="605000" />
+      <workItem from="1652793819623" duration="4788000" />
+      <workItem from="1652869727637" duration="4457000" />
+      <workItem from="1653189231868" duration="23243000" />
+      <workItem from="1653310900943" duration="11889000" />
+      <workItem from="1653460502153" duration="16000" />
+      <workItem from="1653573470622" duration="4078000" />
+      <workItem from="1653614646051" duration="24000" />
+      <workItem from="1653705453334" duration="39888000" />
+      <workItem from="1653877596266" duration="81000" />
+      <workItem from="1653920533041" duration="3585000" />
+      <workItem from="1653959269100" duration="6375000" />
+      <workItem from="1653992663127" duration="4616000" />
+      <workItem from="1654068673468" duration="7092000" />
+      <workItem from="1654171776508" duration="2930000" />
+      <workItem from="1654323938462" duration="913000" />
+      <workItem from="1654584035289" duration="39071000" />
+      <workItem from="1654739170960" duration="620000" />
+      <workItem from="1654782934245" duration="3794000" />
+      <workItem from="1654833259337" duration="1673000" />
+      <workItem from="1654842002445" duration="36014000" />
+      <workItem from="1655193054812" duration="51349000" />
+      <workItem from="1655445945425" duration="8567000" />
+      <workItem from="1655517724476" duration="44187000" />
+      <workItem from="1655689352741" duration="125000" />
+      <workItem from="1655734290606" duration="3967000" />
+      <workItem from="1655773784476" duration="9000" />
+      <workItem from="1655796814776" duration="38000" />
+      <workItem from="1655796993172" duration="628000" />
+      <workItem from="1655807187565" duration="3062000" />
+      <workItem from="1655817227240" duration="6464000" />
+      <workItem from="1655859290511" duration="47000" />
+      <workItem from="1655903945485" duration="5255000" />
+      <workItem from="1655949420663" duration="9000" />
+      <workItem from="1655993649273" duration="4084000" />
+      <workItem from="1656035536265" duration="207000" />
+      <workItem from="1656139238348" duration="3170000" />
+      <workItem from="1656213928471" duration="20285000" />
+      <workItem from="1656312452409" duration="5758000" />
+      <workItem from="1656395777938" duration="442000" />
+      <workItem from="1656396761621" duration="46000" />
+      <workItem from="1656421670671" duration="6128000" />
+      <workItem from="1656820802481" duration="5101000" />
+      <workItem from="1657004930307" duration="122000" />
+      <workItem from="1658990595628" duration="33285000" />
+      <workItem from="1659348593113" duration="7745000" />
+      <workItem from="1659362760252" duration="4547000" />
+      <workItem from="1659421407035" duration="33000" />
+      <workItem from="1659424984253" duration="25024000" />
+      <workItem from="1659591827175" duration="14463000" />
+      <workItem from="1659755252231" duration="42151000" />
+      <workItem from="1659922330223" duration="18000" />
+      <workItem from="1659937458322" duration="37841000" />
+      <workItem from="1660112984479" duration="46016000" />
+      <workItem from="1660266970327" duration="52740000" />
+      <workItem from="1660527621602" duration="54983000" />
+      <workItem from="1660700633312" duration="48725000" />
+      <workItem from="1661132654464" duration="14000" />
+      <workItem from="1661154708490" duration="1480000" />
+      <workItem from="1661157558130" duration="164000" />
+      <workItem from="1661157741754" duration="674000" />
+      <workItem from="1661169272824" duration="9000" />
+      <workItem from="1661262900203" duration="3986000" />
+      <workItem from="1661307712070" duration="13000" />
+      <workItem from="1661308988272" duration="21159000" />
+      <workItem from="1661392922048" duration="1210000" />
+      <workItem from="1661412620074" duration="18629000" />
+      <workItem from="1661477430512" duration="613000" />
+      <workItem from="1661566045763" duration="22550000" />
+      <workItem from="1661761121216" duration="34864000" />
+      <workItem from="1661925040017" duration="20138000" />
+      <workItem from="1662010494036" duration="71610000" />
+      <workItem from="1662265566854" duration="11486000" />
+      <workItem from="1662340286488" duration="26525000" />
+      <workItem from="1662427092646" duration="22743000" />
+      <workItem from="1662546156087" duration="10211000" />
+      <workItem from="1662598727366" duration="20048000" />
+      <workItem from="1662638806109" duration="56000" />
+      <workItem from="1662686729179" duration="8834000" />
+      <workItem from="1663030891881" duration="23828000" />
+      <workItem from="1663120989910" duration="11831000" />
+      <workItem from="1663204336385" duration="20332000" />
+      <workItem from="1663291517885" duration="25550000" />
+      <workItem from="1663377751035" duration="21608000" />
+      <workItem from="1663467648302" duration="5457000" />
+      <workItem from="1663551258691" duration="22521000" />
+      <workItem from="1663636888888" duration="27928000" />
+      <workItem from="1663722605557" duration="22471000" />
+      <workItem from="1663809412845" duration="21285000" />
+      <workItem from="1663859760006" duration="202000" />
+      <workItem from="1663893988115" duration="13867000" />
+      <workItem from="1663941435336" duration="3045000" />
+      <workItem from="1663983007411" duration="42561000" />
+      <workItem from="1664157021814" duration="24695000" />
+      <workItem from="1664243946836" duration="23035000" />
+      <workItem from="1664327528597" duration="32182000" />
+      <workItem from="1664413874773" duration="84732000" />
+      <workItem from="1664674277604" duration="22333000" />
+      <workItem from="1664763125670" duration="35452000" />
+      <workItem from="1664941079385" duration="46522000" />
+      <workItem from="1665191285636" duration="3962000" />
+      <workItem from="1665282422952" duration="6032000" />
+      <workItem from="1665404863689" duration="101598000" />
+      <workItem from="1665726062658" duration="57693000" />
+      <workItem from="1665970062093" duration="28754000" />
+      <workItem from="1666063216561" duration="54734000" />
+      <workItem from="1666229378839" duration="30282000" />
+      <workItem from="1666315822414" duration="55806000" />
+      <workItem from="1666574273234" duration="33284000" />
+      <workItem from="1666661233187" duration="30783000" />
+      <workItem from="1666747546486" duration="54142000" />
+      <workItem from="1666919859427" duration="77331000" />
+      <workItem from="1667264794037" duration="25409000" />
+      <workItem from="1667352415089" duration="25038000" />
+      <workItem from="1667437976798" duration="27390000" />
+      <workItem from="1667524267575" duration="40700000" />
+      <workItem from="1667815654288" duration="11746000" />
+      <workItem from="1667870025629" duration="14408000" />
+      <workItem from="1667959431710" duration="16017000" />
+      <workItem from="1668046599486" duration="18605000" />
+      <workItem from="1668129410787" duration="19243000" />
+      <workItem from="1668217543635" duration="35542000" />
+      <workItem from="1668474121118" duration="1546000" />
+      <workItem from="1668562387874" duration="18813000" />
+      <workItem from="1668603767423" duration="6007000" />
+      <workItem from="1668663528547" duration="22866000" />
+      <workItem from="1668734403207" duration="61767000" />
+      <workItem from="1668993572241" duration="151138000" />
+      <workItem from="1669615577173" duration="29034000" />
+      <workItem from="1669709476620" duration="11345000" />
+      <workItem from="1670808524312" duration="190498000" />
+      <workItem from="1672135951747" duration="12203000" />
+      <workItem from="1672190261867" duration="53389000" />
+      <workItem from="1672362786921" duration="26027000" />
+      <workItem from="1672455865690" duration="1659000" />
+      <workItem from="1672718126097" duration="62750000" />
+      <workItem from="1673081355394" duration="9772000" />
+      <workItem from="1673258002509" duration="59795000" />
+      <workItem from="1673573905564" duration="12754000" />
+      <workItem from="1675129211019" duration="115088000" />
+      <workItem from="1675645709420" duration="23308000" />
+      <workItem from="1675836060125" duration="46648000" />
+      <workItem from="1676269087028" duration="47652000" />
+      <workItem from="1676458053707" duration="7517000" />
+      <workItem from="1676532832898" duration="359000" />
+      <workItem from="1676613958078" duration="42438000" />
+      <workItem from="1677217132122" duration="15001000" />
+      <workItem from="1677588689011" duration="8554000" />
+      <workItem from="1677661313824" duration="734000" />
+      <workItem from="1677668244090" duration="10376000" />
+      <workItem from="1677723291283" duration="7312000" />
+      <workItem from="1677756437101" duration="13595000" />
+      <workItem from="1677839877886" duration="23858000" />
+      <workItem from="1678192570370" duration="12690000" />
+      <workItem from="1678266030784" duration="11193000" />
+      <workItem from="1678362462921" duration="55933000" />
+      <workItem from="1679276011278" duration="9000" />
+      <workItem from="1679318885586" duration="3521000" />
+      <workItem from="1679361020714" duration="15000" />
+      <workItem from="1679408434224" duration="3131000" />
+      <workItem from="1679541151044" duration="2518000" />
+      <workItem from="1679575202797" duration="5133000" />
+      <workItem from="1679892553771" duration="1090000" />
+      <workItem from="1680062135535" duration="12962000" />
+      <workItem from="1680402587105" duration="7819000" />
+      <workItem from="1680530660991" duration="2062000" />
+      <workItem from="1680614922893" duration="6273000" />
+      <workItem from="1680672038234" duration="13691000" />
+      <workItem from="1680752874693" duration="2356000" />
+      <workItem from="1681124013863" duration="2271000" />
+      <workItem from="1681192325670" duration="6617000" />
+      <workItem from="1681363987243" duration="26846000" />
+      <workItem from="1681724890074" duration="5533000" />
+      <workItem from="1681780042438" duration="5558000" />
+      <workItem from="1683265305901" duration="21247000" />
+      <workItem from="1683517158249" duration="93000" />
+      <workItem from="1683540855554" duration="8860000" />
+      <workItem from="1683591777636" duration="4382000" />
+      <workItem from="1683635899052" duration="4279000" />
+      <workItem from="1683720720923" duration="13658000" />
+      <workItem from="1683851842342" duration="29637000" />
+      <workItem from="1684124147370" duration="11319000" />
+      <workItem from="1684284320932" duration="4348000" />
+      <workItem from="1685240936116" duration="5544000" />
+      <workItem from="1685408040317" duration="20000" />
+      <workItem from="1690204388866" duration="3843000" />
+      <workItem from="1690293952359" duration="13567000" />
+      <workItem from="1692249889512" duration="13000" />
+      <workItem from="1693212606336" duration="20579000" />
+      <workItem from="1693830636987" duration="25714000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/utils/review/DoublePointer2.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/utils/review/DoublePointer2.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/utils/review/DoublePointer2.java</url>
+          <line>327</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/utils/review/reviewCode.java</url>
+          <line>524</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/homework/prev/comeBackHome.java</url>
+          <line>1944</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/homework/prev/comeBackHome.java</url>
+          <line>2697</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/algorithm/DFS.java</url>
+          <line>1280</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/utils/review/reviewCode.java</url>
+          <line>780</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/algorithm/BackTrack.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/important/Thinking.java</url>
+          <line>1294</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/homework/prev/Working.java</url>
+          <line>4596</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/algorithm/ArrayListNode.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/homework/prev/Reviewing.java</url>
+          <line>547</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/algorithm/BinSearch.java</url>
+          <line>1777</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/competition/prevPrev/subject1.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="157" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/competition/prev/subject4.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/competition/current/subject3.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/important/Weekly.java</url>
+          <line>731</line>
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/utils/other/ListNodeTest.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="196" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/algorithm/minDistance.java</url>
+          <line>713</line>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/homework/Working2.java</url>
+          <line>624</line>
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/homework/Working2.java</url>
+          <line>1133</line>
+          <option name="timeStamp" value="217" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/homework/Working2.java</url>
+          <line>1169</line>
+          <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/homework/Working2.java</url>
+          <line>1967</line>
+          <option name="timeStamp" value="219" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/homework/Working2.java</url>
+          <line>2068</line>
+          <option name="timeStamp" value="220" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/leetcode/homework/Working2.java</url>
+          <line>2299</line>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/leetcode$Main.ic" NAME="Main Coverage Results" MODIFIED="1643264048250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/leetcode$leetcodeMain.ic" NAME="leetcodeMain Coverage Results" MODIFIED="1669256411537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
